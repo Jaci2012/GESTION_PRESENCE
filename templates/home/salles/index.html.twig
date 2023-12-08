@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Listes des étudiants</h1><br/>
+    <a href="{{ path('rooms_add') }}" class="btn btn-primary">Ajouter une salle</a>
+    <br/><br/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Nom de la salle</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for room in rooms %}
+                <tr>
+                    <td>{{ room.id }}</td>
+                    <td>{{ room.design }}</td>
+                    <td>
+                     <a href="{{ path('rooms_edit', {'id': room.id}) }}" class="btn btn-success btn-sm">Modifier</a>
+                    <a href=""
+                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')" class="btn btn-danger btn-sm">
+                        Supprimer
+                    </a>                   
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

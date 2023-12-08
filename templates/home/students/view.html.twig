@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block content %}
+ <div class="carte">
+        <div class="eni">
+            <img src="{{ absolute_url(asset('images/eni.jfif')) }}" />       
+        </div> 
+        <div class="univ">
+            <img src="{{ absolute_url(asset('images/univ.png')) }}" />       
+        </div>
+        <div class="text-1">
+           <h5>MINISTERE DE L'ENSEIGNEMENT SUPERIEUR</h5>       
+        </div>
+        <div class="text-2">
+           <h5>ET DE LA RECHERCHE SCIENTIFIQUE</h5>       
+        </div>
+        <div class="text-3">
+           <h4>UNIVERSITE DE FIANARANTSOA</h4>       
+        </div>
+        <div class="text-4">
+           <h3>ECOLE NATIONALE D'INFORMATIQUE</h3>       
+        </div>
+        <div class="photo">
+            <img src="{{ absolute_url(asset('images/jaci.jpg')) }}" />      
+        </div>
+        <div class="contenuss">
+            <p>Matricule: {{ student.matricule }}</p>     
+            <p>Nom: {{ student.lastname }}</p>      
+            <p>Prénom: {{ student.firstname }}</p>     
+            <p>Parcours: {{ student.career }}</p>     
+            <p>Niveau: {{ student.level }}</p>    
+        </div>
+        <div class="annee">
+            <h6>Année universitaire: {{ student.years }}</h6>   
+        </div>
+     <h1>QR Code</h1>
+    <img src="{{ path('student_qrcode', {'id': student.id}) }}" alt="QR Code">
+
+
+ </div>
+ 
+{% endblock %}

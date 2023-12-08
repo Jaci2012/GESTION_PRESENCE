@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Ajout parcours</h1>
+    {{ form_start(form) }}
+
+      {{ form_row(form.design, {'attr': {'class': 'form-control', 'placeholder': 'Désignation du parcours'}}) }}
+        
+    <br/>
+    <button type="submit" class="btn btn-primary">Créer</button>
+    {{ form_end(form) }}
+
+{% endblock %}

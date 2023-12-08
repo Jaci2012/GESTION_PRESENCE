@@ -1,0 +1,3 @@
+# translations/messages.en.yaml
+'Invalid credentials.': 'Vos informations de connexion sont incorrectes. Veuillez réessayer.'
+'Bad credentials.': 'Désolé, les identifiants fournis ne sont pas valides. Veuillez réessayer.'

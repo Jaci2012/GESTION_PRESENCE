@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Modifier un professeur</h1>
+    {{ form_start(form) }}
+     <div class="row">
+         <div class="col-6">
+            {{ form_row(form.lastname, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
+        </div>
+         <div class="col-6">
+            {{ form_row(form.firstname, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
+        </div>
+    </div>
+
+    <div class="row">
+         <div class="col-6">
+            {{ form_row(form.cin, {'attr': {'class': 'form-control', 'placeholder': 'Votre CIN'}}) }}
+        </div>
+         <div class="col-6">
+            {{ form_row(form.diplome, {'attr': {'class': 'form-control', 'placeholder': 'Votre diplome'}}) }}
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <button type="submit" class="btn btn-primary">Modifier</button>
+    {{ form_end(form) }}
+
+{% endblock %}

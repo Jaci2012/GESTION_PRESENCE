@@ -1,0 +1,104 @@
+body{
+    overflow-x: hidden;
+}
+.login-form{
+    max-width: 450px;position: relative;left: 550px;top: 45px;border: 1px solid #fff;box-shadow: 15px 5px 15px 10px gray;padding: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Réinitialisation des marges et des espacements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #000738;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style pour le menu horizontal */
+nav ul {
+    background-color: #333;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Style pour le contenu principal */
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+}
+
+/* Ajoutez d'autres styles personnalisés selon vos besoins */
+.carte{
+    border: 1px solid black;width: 500px;height: 300px;position: relative;left: 300px;border-radius: 1rem;
+}
+.eni img{
+    width: 45px;position: relative;top: 25px;left: 80px;
+}
+.univ img{
+    width: 37px;position: absolute;top: 25px;left: 23px;
+}
+.text-1 h5{
+    font-size: 15px;
+    position: relative;
+    left: 150px;
+    top: -25px;
+}
+.text-2 h5{
+    font-size: 15px;
+    position: relative;
+    left: 180px;
+    top: -25px;
+}
+.text-3 h4{
+    font-size: 20px;
+    position: relative;
+    left: 150px;
+    top: -25px;
+}
+.text-4 h3{
+    font-size: 20px;
+    position: relative;
+    left: 130px;
+    top: -25px;
+}
+.photo img{
+    width: 120px;border-radius: 1rem;
+}
+.photo{
+    position: relative;left: 25px;top: -20px;
+}
+.contenuss{
+    position: relative;left: 160px;top: -140px;
+}
+.contenuss p{
+    font-size: 15px;padding: 0;margin: 0;
+}
+.annee{
+    position: relative;left: 175px;top: -120px;
+}

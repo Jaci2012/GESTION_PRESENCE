@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Ajout matiere</h1>
+    {{ form_start(form) }}
+
+      {{ form_row(form.design, {'attr': {'class': 'form-control', 'placeholder': 'Nom de la matiere'}}) }}
+        
+    <br/>
+    <button type="submit" class="btn btn-primary">Créer</button>
+    {{ form_end(form) }}
+
+{% endblock %}

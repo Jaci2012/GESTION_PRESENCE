@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ absolute_url(asset('css/styles.css')) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ absolute_url(asset('bootstrap/dist/css/bootstrap.min.css')) }}" type="text/css" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Tableau de Bord</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Tableau de bord</a></li>
+            <li><a href="{{ path('students') }}">Etudiant</a></li>
+            <li><a href="{{ path('profs') }}">Professeur</a></li>
+            <li><a href="{{ path('subjects') }}">Matiere</a></li>
+            <li><a href="{{ path('rooms') }}">Salle</a></li>
+            <li><a href="{{ path('levels') }}">Niveau</a></li>
+            <li><a href="{{ path('careers') }}">Parcours</a></li>
+            <li><a href="#">Présence</a></li>
+            <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+</body>
+</html>

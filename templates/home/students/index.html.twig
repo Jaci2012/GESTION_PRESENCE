@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Listes des étudiants</h1><br/>
+    <a href="{{ path('students_add') }}" class="btn btn-primary">Ajouter un étudiant</a>
+    <br/><br/>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Année universitaire</th>
+                <th>Matricule</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Parcours</th>
+                <th>Niveau</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.years }}</td>
+                    <td>{{ student.matricule }}</td>
+                    <td>{{ student.firstname }}</td>
+                    <td>{{ student.lastname }}</td>
+                    <td>{{ student.career }}</td>
+                    <td>{{ student.level }}</td>
+                    <td>
+                        <div class="btn-container">
+                            <a href="{{ path('students_edit', {'id': student.id}) }}" class="btn btn-success btn-sm">Modifier</a>
+                        </div>
+                        <div class="btn-container">
+                            <form method="POST" action="{{ path('students_delete', {'id': student.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet étudiant ?')">
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ student.id) }}">
+                                <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                            </form>
+                        </div>
+                        <div class="btn-container">
+                            <a href="{{ path('students_view', {'id': student.id}) }}" class="btn btn-warning btn-sm">Voir</a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <style>
+        .btn-container {
+            display: inline-block;
+            margin-right: 10px; /* Espace entre les boutons */
+        }
+    </style>
+
+{% endblock %}

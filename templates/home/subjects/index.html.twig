@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Listes des matieres</h1>
+    <a href="{{ path('subjects_add') }}" class="btn btn-primary">Ajouter un matiere</a>
+    <br/><br/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subject in subjects %}
+                <tr>
+                    <td>{{ subject.id }}</td>
+                    <td>{{ subject.design }}</td>
+                    <td>
+                     <a href="{{ path('subject_edit', {'id': subject.id}) }}" class="btn btn-success btn-sm">Modifier</a>
+                    <a href=""
+                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')" class="btn btn-danger btn-sm">
+                        Supprimer
+                    </a>                   
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

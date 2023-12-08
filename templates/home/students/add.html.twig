@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Ajout etudiants</h1>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-6">
+            {{ form_row(form.matricule, {'attr': {'class': 'form-control', 'placeholder': 'Votre matricule'}}) }}
+        </div> 
+
+        <div class="col-6">
+            {{ form_row(form.years, {'attr': {'class': 'form-control', 'placeholder': 'EX: 2020-2021'}}) }}
+        </div>
+    </div>  
+    <div class="row">
+         <div class="col-6">
+            {{ form_row(form.lastname, {'attr': {'class': 'form-control', 'placeholder': 'Votre nom'}}) }}
+        </div>
+         <div class="col-6">
+            {{ form_row(form.firstname, {'attr': {'class': 'form-control', 'placeholder': 'Votre prénom'}}) }}
+        </div>
+    </div>
+    {{ form_row(form.adresse,  {'attr': {'class': 'form-control', 'placeholder': 'Votre adresse'}}) }}
+
+    <div class="row">
+         <div class="col-6">
+            {{ form_row(form.career, {'attr': {'class': 'form-control', 'placeholder': 'Ex: GB'}}) }}
+        </div>
+         <div class="col-6">
+            {{ form_row(form.level, {'attr': {'class': 'form-control', 'placeholder': 'Ex: L1'}}) }}
+        </div>
+    </div>
+    <br/>
+     {{ form_row(form.photos) }}
+    <br/>
+    <button type="submit" class="btn btn-primary">Créer</button>
+    {{ form_end(form) }}
+
+{% endblock %}
